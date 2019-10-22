@@ -1,0 +1,14 @@
+body{
+	font-family: 'Source Sans Pro', Helvetica, sans-serif;
+	padding-left: 30px;
+}
+
+.noche {
+	background: black;
+	color: white;
+}
+
+.dia {
+	background: white;
+	color: black;
+}

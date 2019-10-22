@@ -1,0 +1,45 @@
+body{
+	font-family: 'Source Sans Pro', Helvetica, sans-serif;
+}
+h1{
+	padding-left: 10px;
+}
+#calculadora {
+	width: 280px;
+	margin: auto;
+	background: #eee;
+}
+
+#contenedor-resultado {
+	background: #eee;
+	padding: 0px 30px 0px 0px;
+}
+#resultado {
+	text-align: right;
+	background: darkgray;
+	padding: 5px 5px;
+	margin: 0px 10px 10px 10px;
+}
+.fila {
+	display: block;
+	padding: 10px;
+}
+.boton {
+	display: inline-block;
+	padding: 10px 0px;
+	background: lightgray;
+	max-width: 50px;
+	width: 50px;
+	margin-right: 6px;
+	cursor: pointer;
+	text-align: center;
+	font-weight: bold;
+}
+
+.boton:hover{
+	background: darkgray;
+}
+
+.boton.double {
+	padding: 10px 30px;
+}
