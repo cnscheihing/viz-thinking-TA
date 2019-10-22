@@ -1,4 +1,4 @@
-# Ayudantía Pensamiento Visual
+# Ayudantías de Programación - Pensamiento Visual
 
 Presentaciones y códigos de ejemplo de las ayudantías de programación del curso [Pensamiento Visual](http://catalinacortazar.com/PensamientoVisual/), curso exploratorio de la iniciativa de ingeniería y diseño [DILAB](https://www.di-lab.cl/) @ Pontificia Universidad Católica de Chile.
 
@@ -7,12 +7,12 @@ El conjunto de ayuantías consiste en una introducción a las herramientas neces
 
 | Ayudantía | Contenido |
 | ------ | ------ |
-| Ayudantía 01 | Diseño Gráfico e Infografías |
-| Ayudantía 02 | `Python` |
-| Ayudantía 03 | `HTML` + `CSS` |
-| Ayudantía 04 | `JavaScript` |
-| Ayudantía 05 | `jQuery` |
-| Ayudantía 06 | `d3.js` |
+| [Ayudantía 01](https://github.com/cnscheihing/viz-thinking-TA/tree/master/ayudantias/ayudantia_01) | Diseño Gráfico e Infografías |
+| [Ayudantía 02](https://github.com/cnscheihing/viz-thinking-TA/tree/master/ayudantias/ayudantia_02) | `Python` |
+| [Ayudantía 03](https://github.com/cnscheihing/viz-thinking-TA/tree/master/ayudantias/ayudantia_03) | `HTML` + `CSS` |
+| [Ayudantía 04](https://github.com/cnscheihing/viz-thinking-TA/tree/master/ayudantias/ayudantia_04) | `JavaScript` |
+| [Ayudantía 05](https://github.com/cnscheihing/viz-thinking-TA/tree/master/ayudantias/ayudantia_05) | `jQuery` |º
+| [Ayudantía 06](https://github.com/cnscheihing/viz-thinking-TA/tree/master/ayudantias/ayudantia_06) | `d3.js` |
 
 Las presentaciones de las ayudantías 01 a 04 fueron diesñadas y elaboradas por el seco de [Esteban Sandoval](https://github.com/ejsandoval), con algunas modificaciones propias.
 
