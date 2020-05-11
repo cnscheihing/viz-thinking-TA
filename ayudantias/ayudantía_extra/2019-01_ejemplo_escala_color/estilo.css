@@ -1,0 +1,43 @@
+div#general{
+	margin:auto;
+	width:1345px;
+	height:665px;
+
+}
+div#titulo{
+	float:left;
+  font-family: "Lato";
+  font-size: 40px;
+	width:350px;
+	height:565px;
+
+}
+
+div#lista{
+  position: absolute;
+	top : 550px;
+  left: 5px;
+  font-family: "Lato";
+  font-size: 20px;
+	width:900px;
+	height:565px;
+
+}
+
+#mapa{
+	position: relative;
+	top: -420px;
+	left: -20px;
+	max-height: 600px;
+	width: auto;
+  margin-left: 80px;
+	margin-bottom:80px;
+  margin-top:-160px;
+
+}
+
+#boton_cambio_color {
+	position: absolute;
+	top: 600px;
+	left: 5px;
+}
