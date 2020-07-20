@@ -1,6 +1,6 @@
 function onOpen() {
-  var spreadsheet = SpreadsheetApp.getActive();
-  var menuItems = [{name: 'Obtener resultados', functionName: 'generateResults'}];
+  const spreadsheet = SpreadsheetApp.getActive();
+  const menuItems = [{name: 'Obtener resultados', functionName: 'generateResults'}];
   spreadsheet.addMenu('Evaluación de Pares', menuItems);
 }
 
@@ -10,26 +10,24 @@ function aContainsB (a, b) {
 
 // Procesa cada columna con resultados: calcula el promedio para cada columna y se lo asigna al alumno
 function processColumn(students, rangeData, col, height) {
-  var category = rangeData[0][col].split("[")[0].replace(" ", "");
+  const category = rangeData[0][col].split("[")[0].replace(" ", "");
   if (!aContainsB(category, "Marca") && !aContainsB(category, "Si")){
-
-    var name = rangeData[0][col].split("[")[1].replace("]", "");
-    var count = 0;
-    var sum = 0;
+    const name = rangeData[0][col].split("[")[1].replace("]", "");
+    let count = 0;
+    let sum = 0;
+    if (!aContainsB(Object.keys(students), name)){
+      students[name] = { contesta: false };
+    }
 
     for (row = 1; row < height; row++) {
       if (rangeData[row][col] != "Este soy yo." && rangeData[row][col] != "") {
         sum += rangeData[row][col];
         count++;
+      } else if (rangeData[row][col] === "Este soy yo.") {
+        students[name].contesta = true;
       }
     }
-
-    if (students.hasOwnProperty(name)){
-      students[name][category] = sum / count;
-    } else {
-      students[name] = { contesta: false };
-      students[name][category] = sum / count;
-    }
+    students[name][category] = sum / count;
   }
 }
 
@@ -46,14 +44,12 @@ function calculateBonus(students){
       var mean = sum / count;
       students[studentName]["promedio"] = mean;
 
-      if (mean < 2.4) {
-        var bonus = -0.5;
-      } else if (mean < 2.8) {
-        var bonus = -0.3;
-      } else if (mean < 4) {
+      if (mean < 2.8) {
+        var bonus = 8.5*(mean - 2.8);
+      } else if (mean <= 3.2) {
         var bonus = 0;
       } else {
-        var bonus = 0.2;
+        var bonus = 8.5*(mean - 3.2);
       }
 
       if (!students[studentName]["contesta"]) {
@@ -77,11 +73,7 @@ function getResults(){
   var height = rangeData.length;
   var categories = [];
 
-  for (row = 1; row < height; row++){
-    students[rangeData[row][2]] = {contesta: true};
-  }
-
-  for (col = 4; col < width; col++){
+  for (col = 3; col < width; col++){
     processColumn(students, rangeData, col, height);
   }
 
